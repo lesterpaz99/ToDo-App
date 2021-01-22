@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="title">
+            To Do App
+        </h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <div class="form-group">
+                <form action="formTask" id="formTask">
+                    <div>
+                        <label for="formTask">
+                            <input type="text" id="title" class="todo-title" placeholder="Add a ToDo">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="formTask">
+                            <textarea class="description" id="description" cols="20" rows="10" placeholder="Add a description"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="formTask">
+                            <input class="btn-submit" type="button" value="Save">
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <script src="./app.js"></script>
 </body>

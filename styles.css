@@ -1,4 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     background: #cb2d3e;  /* fallback for old browsers */
     background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
+
+.header {
+    border-bottom: 1px solid white;
+}
+
+.title {
+    font-size: 2.6rem;
+    color: white;
+    opacity: .9;
+    font-weight: normal;
+    padding: 1rem 2.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 4rem;
+}
+
+.form-group {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    position: sticky;
+}
+
+.todo-title, .description, .btn-submit {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-submit {
+    padding: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-submit:hover {
+    background-color: rgb(148, 236, 177);
+    transform: scale(1.01);
+    cursor: pointer;
 }
