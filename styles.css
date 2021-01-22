@@ -1,0 +1,4 @@
+body {
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: linear-gradient(to right, #ef473a, #cb2d3e);
+}
