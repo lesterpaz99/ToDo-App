@@ -7,8 +7,7 @@ const saveTask = (event) => {
         description: description.value 
     };
 
-    title.value = '';
-    description.value = '';
+    title.value = description.value = '';
     
     if(localStorage.getItem('Tasks') === null) {
         let tasksToDo = [];
