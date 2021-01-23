@@ -7,7 +7,6 @@ const saveTask = (event) => {
         description: description.value 
     };
 
-    title.value = description.value = '';
     
     if(localStorage.getItem('Tasks') === null) {
         let tasksToDo = [];
@@ -18,6 +17,9 @@ const saveTask = (event) => {
         tasksToDo.push(task);
         localStorage.setItem('Tasks', JSON.stringify(tasksToDo));
     }
+
+    document.getElementById('formTask').reset();
+    getTasks();
     event.preventDefault();
 }
 
@@ -33,13 +35,22 @@ const getTasks = () => {
         let title = element.title;
         let description = element.description;
         taskView.innerHTML += `<div class="task-container">
-            <div>
-            <div><p>${title} - ${description}</p></div>
-            <div><button>Delete</button></div>
-            </div>
+            <div><p><span class="taskTitle">${title}</span> - ${description}</p></div>
+            <div><button class="deleteTask" id="deleteTask" onClick="deleteTask('${title}')">Delete</button></div>
         </div>
         `
     }
 }
 
 getTasks();
+
+const deleteTask = (title) => {
+    let tasks = JSON.parse(localStorage.getItem('Tasks'));
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].title == title) {
+            tasks.splice(i, 1);
+        }
+    }
+    localStorage.setItem('Tasks', JSON.stringify(tasks));
+    getTasks();
+}
