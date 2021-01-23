@@ -1,18 +1,25 @@
-let button = (document.getElementById('formTask'));
-
 const saveTask = (event) => {
-    let title = document.getElementById('title').value;
-    let description = document.getElementById('description').value;
+    let title = document.getElementById('title');
+    let description = document.getElementById('description');
 
-    const tasks = {
-        title, //title: title
-        description //description: description
+    const task = {
+        title: title.value, 
+        description: description.value 
     };
-    console.table(tasks)
+
+    title.value = '';
+    description.value = '';
+    
+    if(localStorage.getItem('Tasks') === null) {
+        let tasksToDo = [];
+        tasksToDo.push(task);
+        localStorage.setItem('Tasks', JSON.stringify(tasksToDo));
+    } else {
+        let tasksToDo = JSON.parse(localStorage.getItem('Tasks'));
+        tasksToDo.push(task);
+        localStorage.setItem('Tasks', JSON.stringify(tasksToDo));
+    }
+    event.preventDefault();
 }
-
-//Arreglar el formulario, para que funcione con el evento submit
-//Recuerda prevenir el comportamiento por defecto del evento submit
-button.addEventListener('click', saveTask)
-
-let list = document.getElementById('tasks');
+//the submit event is only for entire forms, not for just a button.
+document.getElementById('formTask').addEventListener('submit', saveTask);
