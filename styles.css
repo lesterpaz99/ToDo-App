@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
 }
 
 .title {
@@ -62,4 +62,23 @@ body {
     background-color:#38ef7d;
     transform: scale(1.01);
     cursor: pointer;
+}
+
+.things-to-do {
+    border: 1px solid white;
+    text-align: center;
+    position: relative;
+}
+
+.things-to-do>p {
+    font-size: 3.4rem;
+    font-weight: 100;
+    position: absolute;
+    top: -24px;
+    left: 40%;
+    color: white;
+}
+
+.tasks {
+    padding: 6rem;
 }
