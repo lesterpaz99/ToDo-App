@@ -11,7 +11,7 @@
 
 body {
     background: #cb2d3e;  /* fallback for old browsers */
-    background: linear-gradient(to right, #ef473a, #cb2d3e);
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); 
 }
 
 .header {
@@ -55,10 +55,11 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 1;
     color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
 }
 
 .btn-submit:hover {
-    background-color: rgb(148, 236, 177);
+    background-color:#38ef7d;
     transform: scale(1.01);
     cursor: pointer;
 }
