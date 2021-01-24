@@ -10,12 +10,8 @@
 }
 
 body {
-    background: #cb2d3e;  /* fallback for old browsers */
+    background: #c06c84;  /* fallback for old browsers */
     background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); 
-}
-
-.header {
-    /* border-bottom: 1px solid white; */
 }
 
 .title {
@@ -37,7 +33,6 @@ body {
     margin: 2.5rem;
     text-align: center;
     border-radius: 8px;
-    position: sticky;
 }
 
 .form-group form {
@@ -81,10 +76,6 @@ body {
     top: -24px;
     left: 40%;
     color: white;
-}
-
-.task {
-    /* padding: 6rem; */
 }
 
 .task-container {
