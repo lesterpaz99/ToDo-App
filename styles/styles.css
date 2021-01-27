@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #c06c84;  /* fallback for old browsers */
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); 
+}
+
+main {
+    max-width: 100%;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.6rem;
+    color: white;
+    opacity: .9;
+    font-weight: normal;
+    padding: 1rem 2.5rem;
+    width: fit-content;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 4rem;
+}
+
+.form-group {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.form-group form {
+    padding: 2rem 6rem;
+}
+
+.todo-title, .description, .btn-submit {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-submit {
+    padding: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.btn-submit:hover {
+    background-color:#38ef7d;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.things-to-do {
+    text-align: center;
+    position: relative;
+    padding: 4rem;
+}
+
+.things-to-do>p {
+    font-size: 3.4rem;
+    font-weight: 100;
+    position: absolute;
+    top: -24px;
+    left: 40%;
+    color: white;
+}
+
+.task-container {
+    padding: 1rem 4rem;
+    background-color: white;
+    margin: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    border-radius: 2px;
+}
+
+.task-container div p span.taskTitle {
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.task-container div button.deleteTask {
+    padding: 0.8rem;
+    background-color: #ba181b;
+    border: none;
+    color:white;
+    opacity: 0.9;
+    border-radius: 4px;
+}
