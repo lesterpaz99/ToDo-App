@@ -32,4 +32,5 @@
 .things-to-do>p {
     font-size: 3.2rem;
     position: static;
+    margin-bottom: 2rem;
 }
