@@ -5,11 +5,11 @@ const saveTask = (event) => {
   if (
     (title.value === "" && description.value === "") ||
      title.value === "" || description.value === "") {
-    alert("Oops! Something went wrong. You have empty values.");
+    alert("Oops! You have empty values.");
   } else {
     const task = {
-      title: title.value,
-      description: description.value,
+      title: title.value.trim(),
+      description: description.value.trim(),
     };
 
     if (localStorage.getItem("Tasks") === null) {
@@ -47,8 +47,6 @@ const getTasks = () => {
   }
 };
 
-getTasks();
-
 const deleteTask = (title) => {
   let tasks = JSON.parse(localStorage.getItem("Tasks"));
   for (let i = 0; i < tasks.length; i++) {
@@ -59,3 +57,5 @@ const deleteTask = (title) => {
   localStorage.setItem("Tasks", JSON.stringify(tasks));
   getTasks();
 };
+
+getTasks();
